@@ -14,6 +14,7 @@ ThemeData lightTheme() {
         color: AppColors.darkPurple,
         fontSize: 24.sp,
         fontWeight: FontWeight.bold,
+        fontFamily: 'Rubik',
       ),
     ),
     textTheme: TextTheme(
@@ -21,41 +22,47 @@ ThemeData lightTheme() {
         fontSize: 20.sp,
         fontWeight: FontWeight.bold,
         color: AppColors.textColor,
+        fontFamily: 'Rubik',
       ),
       headlineMedium: TextStyle(
         fontSize: 26.sp,
         fontWeight: FontWeight.bold,
         color: AppColors.textColor,
+        fontFamily: 'Rubik',
       ),
       headlineLarge: TextStyle(
         fontSize: 32.sp,
         fontWeight: FontWeight.bold,
         color: AppColors.textColor,
+        fontFamily: 'Rubik',
       ),
       bodySmall: TextStyle(
         fontSize: 16.sp,
         color: AppColors.blackColor,
+        fontFamily: 'Rubik',
       ),
       bodyMedium: TextStyle(
         fontSize: 20.sp,
         color: AppColors.blackColor,
+        fontFamily: 'Rubik',
       ),
       bodyLarge: TextStyle(
         fontSize: 24.sp,
         color: AppColors.blackColor,
+        fontFamily: 'Rubik',
       ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: AppColors.bgColor,
       selectedItemColor: AppColors.darkPurple,
       unselectedItemColor: AppColors.lightGrey,
-      unselectedIconTheme: const IconThemeData(
+      unselectedIconTheme: IconThemeData(
         color: AppColors.lightGrey,
-        size: 30,
+        size: 30.r,
       ),
       selectedIconTheme: IconThemeData(
         color: AppColors.darkPurple,
-        size: 30.sp,
+        size: 30.r,
       ),
     ),
   );
