@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import '../../../core/theming/colors.dart';
-import '../../home/ui/home.dart';
+import '../../home/ui/views/home.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String routeName = '/splash';
