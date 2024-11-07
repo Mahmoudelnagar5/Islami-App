@@ -14,10 +14,11 @@ class PrayerContainer extends StatelessWidget {
       ),
       margin: EdgeInsets.symmetric(horizontal: 5.w, vertical: 10.h),
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 0.4,
+      height: MediaQuery.of(context).size.height * 0.38,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         image: DecorationImage(
+          fit: BoxFit.scaleDown,
           colorFilter: ColorFilter.mode(
             const Color(0xff004648).withOpacity(.7),
             BlendMode.srcOver,
