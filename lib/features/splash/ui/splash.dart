@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:islami_app/core/theming/constants.dart';
 
 import '../../../core/theming/colors.dart';
 import '../../home/ui/views/home.dart';
@@ -28,8 +30,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       backgroundColor: AppColors.lightPurple,
       body: Center(
@@ -41,8 +41,8 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             Image.asset(
               'assets/images/splash_nobg.png',
-              width: width,
-              height: 300,
+              width: ScreenUtil().screenWidth,
+              height: 250.h,
               fit: BoxFit.cover,
             ),
             const Spacer(
@@ -55,10 +55,14 @@ class _SplashScreenState extends State<SplashScreen> {
             const Spacer(
               flex: 1,
             ),
-            Text(
-              "صديقك اليومي الذي يوفر لك أوقات الصلاة، الأذكار، تلاوة القرآن، اتجاه القبلة، والمزيد لمساعدتك في تعزيز عملك الديني بسهولة ويسر",
-              style: Theme.of(context).textTheme.bodyMedium,
-              textAlign: TextAlign.center,
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: AppConstants.defaultPadding * 2),
+              child: Text(
+                "صديقك اليومي الذي يوفر لك أوقات الصلاة، الأذكار، تلاوة القرآن، اتجاه القبلة، والمزيد لمساعدتك في تعزيز عملك الديني بسهولة ويسر",
+                style: Theme.of(context).textTheme.bodyMedium,
+                textAlign: TextAlign.center,
+              ),
             ),
             const Spacer(
               flex: 2,
