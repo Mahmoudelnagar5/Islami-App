@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/theming/colors.dart';
 
@@ -21,10 +22,12 @@ class FeatureItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(15),
             ),
             child: CircleAvatar(
-              radius: 30.r,
-              backgroundColor: AppColors.lightPurple,
-              // child: AssetImage('assets/images/prayer_timing.png'),
-            ),
+                radius: 30.r,
+                backgroundColor: AppColors.lightPurple,
+                child: SvgPicture.asset(
+                  image,
+                  fit: BoxFit.cover,
+                )),
           ),
           const SizedBox(
             height: 10,
