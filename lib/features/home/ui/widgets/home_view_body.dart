@@ -4,13 +4,14 @@ import 'package:islami_app/features/home/ui/widgets/feature_item.dart';
 
 import 'prayer_container.dart';
 
-class HomeViewBody extends StatelessWidget {
-  const HomeViewBody({super.key});
+class HomeScreenBody extends StatelessWidget {
+  const HomeScreenBody({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
             const PrayerContainer(),
@@ -21,6 +22,8 @@ class HomeViewBody extends StatelessWidget {
               itemCount: FeatureModel.features.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisSpacing: 10,
+                mainAxisExtent: 185,
+                mainAxisSpacing: 0,
                 crossAxisCount: 2,
               ),
               itemBuilder: (context, index) => FeatureItem(

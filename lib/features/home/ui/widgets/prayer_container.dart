@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
+import 'package:islami_app/core/theming/colors.dart';
 
 class PrayerContainer extends StatelessWidget {
   const PrayerContainer({super.key});
@@ -14,7 +15,7 @@ class PrayerContainer extends StatelessWidget {
       ),
       margin: EdgeInsets.symmetric(horizontal: 5.w, vertical: 10.h),
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 0.38,
+      height: MediaQuery.of(context).size.height * 0.36,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         image: DecorationImage(
@@ -39,7 +40,7 @@ class PrayerContainer extends StatelessWidget {
                   'الصلاة القادمة الضهر الساعه',
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         fontSize: 25.sp,
-                        color: const Color(0xffffffff),
+                        color: AppColors.whiteColor,
                       ),
                 ),
                 const SizedBox(
@@ -49,7 +50,7 @@ class PrayerContainer extends StatelessWidget {
                   DateFormat('hh:mm a').format(DateTime.now()).toString(),
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         fontSize: 25.sp,
-                        color: const Color(0xffffffff),
+                        color: AppColors.whiteColor,
                       ),
                 ),
                 const SizedBox(
@@ -59,7 +60,7 @@ class PrayerContainer extends StatelessWidget {
                   'متبفى من الوقت 05:54:13',
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         fontSize: 25.sp,
-                        color: const Color(0xffffffff),
+                        color: AppColors.whiteColor,
                       ),
                 ),
               ],
