@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/theming/colors.dart';
 import '../../../core/widgets/custom_appbar.dart';
+import '../../../core/widgets/grdient_container.dart';
 
 class QuranHomeScreen extends StatelessWidget {
   static const String routeName = '/quran_home';
@@ -11,8 +12,8 @@ class QuranHomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const CustomAppBar(
+    return const Scaffold(
+      appBar: CustomAppBar(
         title: Row(
           children: [
             Icon(
@@ -29,25 +30,10 @@ class QuranHomeScreen extends StatelessWidget {
         ),
         allowBack: true,
       ),
-      body: Stack(
-        children: [
-          Container(
-            height: ScreenUtil().screenHeight * .4,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  AppColors.lightPurple,
-                  AppColors.lightPurple.withOpacity(0),
-                ],
-              ),
-            ),
-          ),
-          const Center(
-            child: Text('Quran Home Screen'),
-          ),
-        ],
+      body: GrdientContainer(
+        child: Center(
+          child: Text('Quran Home Screen'),
+        ),
       ),
     );
   }

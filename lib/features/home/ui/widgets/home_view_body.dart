@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:islami_app/core/theming/colors.dart';
-import 'package:islami_app/features/home/data/models/feature_model.dart';
-import 'package:islami_app/features/home/ui/widgets/feature_item.dart';
 
+import '../../../../core/theming/colors.dart';
+import '../../data/models/feature_model.dart';
+import 'feature_item.dart';
 import 'last_read.dart';
 import 'prayer_container.dart';
 
