@@ -4,7 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/theming/app_themes.dart';
 import 'core/theming/constants.dart';
+import 'features/audio/ui/audio.dart';
 import 'features/home/ui/screens/home.dart';
+import 'features/quran/ui/quran_home.dart';
+import 'features/settings/ui/settings.dart';
 import 'features/splash/ui/splash.dart';
 import 'islam_app.dart';
 
@@ -35,6 +38,9 @@ class MyApp extends StatelessWidget {
             IslamAppMainScreen.routeName: (context) =>
                 const IslamAppMainScreen(),
             HomeScreen.routeName: (context) => const HomeScreen(),
+            AudioScreen.routeName: (context) => const AudioScreen(),
+            SettingsScreen.routeName: (context) => const SettingsScreen(),
+            QuranHomeScreen.routeName: (context) => const QuranHomeScreen(),
           },
         );
       },

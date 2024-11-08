@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:islami_app/core/theming/constants.dart';
 
 import '../../../../core/theming/colors.dart';
 
@@ -11,54 +11,53 @@ class LastReadSurah extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-        horizontal: 10.w,
-        vertical: 10.h,
+        horizontal: AppConstants.defaultPadding * 2.w,
+        vertical: AppConstants.defaultPadding.h,
       ),
-      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      margin: const EdgeInsets.symmetric(
+          horizontal: AppConstants.defaultMargin,
+          vertical: AppConstants.defaultMargin),
       width: ScreenUtil().screenWidth,
       height: ScreenUtil().screenHeight * 0.14,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         gradient: const LinearGradient(
           colors: [
-            Color(0xff3B97ED),
-            Color(0xffCA74FF),
             Color(0xffFF78C1),
+            Color(0xffCA74FF),
+            Color(0xff3B97ED),
           ],
         ),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          Image.asset(
+            'assets/images/quran1.png',
+            scale: .1,
+          ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text(
-                'Last Read',
-                style: GoogleFonts.poppins(
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.whiteColor,
-                ),
-                textAlign: TextAlign.start,
+                'آخر ما قرأت',
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color: AppColors.whiteColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22.sp,
+                    ),
               ),
               const SizedBox(
                 height: 12,
               ),
               Text(
-                'Al-Baqorah',
-                style: GoogleFonts.poppins(
-                  fontSize: 18.sp,
-                  color: AppColors.whiteColor,
-                ),
+                'سورة البقرة',
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color: AppColors.whiteColor,
+                    ),
               ),
             ],
-          ),
-          const Spacer(),
-          Image.asset(
-            'assets/images/quran1.png',
-            scale: .1,
           ),
         ],
       ),

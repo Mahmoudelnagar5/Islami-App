@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:islami_app/core/theming/constants.dart';
 
 import '../../../../core/theming/colors.dart';
+import '../../../../core/theming/constants.dart';
 
 class FeatureItem extends StatelessWidget {
   const FeatureItem({
@@ -42,14 +41,12 @@ class FeatureItem extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Text(
-            title,
-            style: GoogleFonts.amiri(
-              fontSize: 18.sp,
-              fontWeight: FontWeight.bold,
-              color: AppColors.textColor,
-            ),
-          ),
+          Text(title,
+              style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    color: AppColors.textColor,
+                    fontFamily: AppConstants.textFontFamily,
+                    fontWeight: FontWeight.bold,
+                  )),
         ],
       ),
     );
