@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:islami_app/core/theming/constants.dart';
 
 import '../../../../core/theming/colors.dart';
 
@@ -26,10 +27,12 @@ class FeatureItem extends StatelessWidget {
               border: Border.all(
                 color: AppColors.lightGrey,
               ),
-              borderRadius: BorderRadius.circular(20),
+              borderRadius:
+                  BorderRadius.circular(AppConstants.defaultRadius * 2),
             ),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius:
+                  BorderRadius.circular(AppConstants.defaultRadius * 3),
               child: Image.asset(
                 image,
                 fit: BoxFit.fill,

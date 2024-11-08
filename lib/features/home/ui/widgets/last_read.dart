@@ -15,8 +15,8 @@ class LastReadSurah extends StatelessWidget {
         vertical: 10.h,
       ),
       margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 0.18,
+      width: ScreenUtil().screenWidth,
+      height: ScreenUtil().screenHeight * 0.14,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         gradient: const LinearGradient(
