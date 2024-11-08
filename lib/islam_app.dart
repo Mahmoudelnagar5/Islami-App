@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
 
 import 'core/theming/colors.dart';
-import 'features/home/ui/home.dart';
+import 'features/home/ui/screens/home.dart';
 import 'features/quran/ui/quran_home.dart';
 import 'features/settings/ui/settings.dart';
 

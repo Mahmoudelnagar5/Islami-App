@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/theming/app_themes.dart';
 import 'core/theming/constants.dart';
-import 'features/home/ui/home.dart';
+import 'features/home/ui/screens/home.dart';
 import 'features/splash/ui/splash.dart';
 import 'islam_app.dart';
 
