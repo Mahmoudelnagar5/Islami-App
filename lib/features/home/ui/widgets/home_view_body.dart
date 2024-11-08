@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
+import 'package:islami_app/core/theming/colors.dart';
 import 'package:islami_app/features/home/data/models/feature_model.dart';
 import 'package:islami_app/features/home/ui/widgets/feature_item.dart';
 
+import 'last_read.dart';
 import 'prayer_container.dart';
 
 class HomeScreenBody extends StatelessWidget {
@@ -13,8 +18,24 @@ class HomeScreenBody extends StatelessWidget {
       child: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 11.w,
+                vertical: 2.h,
+              ),
+              child: Text(
+                DateFormat.yMEd('en').format(DateTime.now()).toString(),
+                style: GoogleFonts.amiri(
+                  color: AppColors.textColor,
+                  fontSize: 20.sp,
+                ),
+                textAlign: TextAlign.start,
+              ),
+            ),
             const PrayerContainer(),
+            const LastReadSurah(),
             GridView.builder(
               padding: EdgeInsets.zero,
               shrinkWrap: true,
@@ -22,8 +43,6 @@ class HomeScreenBody extends StatelessWidget {
               itemCount: FeatureModel.features.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisSpacing: 10,
-                mainAxisExtent: 185,
-                mainAxisSpacing: 0,
                 crossAxisCount: 2,
               ),
               itemBuilder: (context, index) => FeatureItem(

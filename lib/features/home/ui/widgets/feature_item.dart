@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/theming/colors.dart';
@@ -20,20 +19,20 @@ class FeatureItem extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 120.h,
-            alignment: Alignment.center,
-            margin: EdgeInsets.symmetric(horizontal: 5.w),
+            width: 120.w,
+            height: 100.h,
             decoration: BoxDecoration(
-              color: const Color(0xff003A44),
-              borderRadius: BorderRadius.circular(15),
+              color: Colors.white,
+              border: Border.all(
+                color: AppColors.lightGrey,
+              ),
+              borderRadius: BorderRadius.circular(20),
             ),
-            child: CircleAvatar(
-              radius: 40.r,
-              backgroundColor: AppColors.lightGrey,
-              child: SvgPicture.asset(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
+              child: Image.asset(
                 image,
-                fit: BoxFit.cover,
-                height: 50.h,
+                fit: BoxFit.fill,
               ),
             ),
           ),
