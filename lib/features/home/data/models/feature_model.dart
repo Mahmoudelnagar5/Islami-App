@@ -9,27 +9,27 @@ class FeatureModel {
   static List<FeatureModel> features = [
     const FeatureModel(
       title: 'أحاديث',
-      image: 'assets/images/hadiths.svg',
+      image: 'assets/images/hadith.png',
     ),
     const FeatureModel(
       title: 'القرآن الكريم',
-      image: 'assets/images/the_holy_quran.svg',
+      image: 'assets/images/quran.png',
     ),
     const FeatureModel(
       title: 'تسبيح',
-      image: 'assets/images/tasbih.svg',
+      image: 'assets/images/tasbih.jpeg',
     ),
     const FeatureModel(
       title: ' مواقيت الصلاة ',
-      image: 'assets/images/mosque.svg',
+      image: 'assets/images/prayer_time.png',
     ),
     const FeatureModel(
       title: 'أذكار',
-      image: 'assets/images/moon.svg',
+      image: 'assets/images/azkar.png',
     ),
     const FeatureModel(
       title: ' أسماء الله الحسنى',
-      image: 'assets/images/Allah.svg',
+      image: 'assets/images/assmaAllah.png',
     ),
   ];
 }
