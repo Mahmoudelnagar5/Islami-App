@@ -16,11 +16,17 @@ class IslamAppMainScreen extends StatefulWidget {
 class _IslamAppMainScreenState extends State<IslamAppMainScreen> {
   int currentIndex = 2;
 
-  final List<Widget> screens = [
-    const SettingsScreen(),
-    const AudioScreen(),
-    const HomeScreen(),
-  ];
+  late List<Widget> screens;
+
+  @override
+  void initState() {
+    super.initState();
+    screens = [
+      const SettingsScreen(),
+      const AudioScreen(),
+      const HomeScreen(),
+    ];
+  }
 
   @override
   Widget build(BuildContext context) {
