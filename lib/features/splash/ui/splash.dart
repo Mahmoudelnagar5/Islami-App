@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:islami_app/core/theming/constants.dart';
 
 import '../../../core/theming/colors.dart';
-import '../../home/ui/home.dart';
+import '../../../islam_app.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String routeName = '/splash';
@@ -22,8 +22,10 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
       const Duration(seconds: 5),
       () {
-        Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const HomeScreen()));
+        Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (context) => const IslamAppMainScreen()));
       },
     );
   }

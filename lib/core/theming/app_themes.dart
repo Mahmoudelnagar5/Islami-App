@@ -6,7 +6,7 @@ import 'colors.dart';
 ThemeData lightTheme() {
   return ThemeData(
     brightness: Brightness.light,
-    scaffoldBackgroundColor: AppColors.bgColor,
+    scaffoldBackgroundColor: AppColors.whiteColor,
     appBarTheme: AppBarTheme(
       backgroundColor: AppColors.lightPurple,
       centerTitle: false,
@@ -53,11 +53,11 @@ ThemeData lightTheme() {
       ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: AppColors.bgColor,
+      backgroundColor: AppColors.whiteColor,
       selectedItemColor: AppColors.darkPurple,
-      unselectedItemColor: AppColors.lightGrey,
+      unselectedItemColor: AppColors.darkGrey,
       unselectedIconTheme: IconThemeData(
-        color: AppColors.lightGrey,
+        color: AppColors.darkGrey,
         size: 30.r,
       ),
       selectedIconTheme: IconThemeData(
