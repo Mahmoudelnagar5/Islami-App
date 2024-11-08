@@ -8,7 +8,7 @@ import '../../../core/theming/colors.dart';
 import '../../../islam_app.dart';
 
 class SplashScreen extends StatefulWidget {
-  static const String routeName = '/splash';
+  static const String routeName = 'splash';
   const SplashScreen({super.key});
 
   @override
@@ -51,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
               flex: 1,
             ),
             Text(
-              'Islam App',
+              'إسلاميات ',
               style: Theme.of(context).textTheme.headlineLarge,
             ),
             const Spacer(

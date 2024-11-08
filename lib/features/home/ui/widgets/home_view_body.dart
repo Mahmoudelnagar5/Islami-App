@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:intl/intl.dart';
+// import 'package:intl/intl.dart';
 
 import '../../../../core/theming/colors.dart';
 import '../../data/models/feature_model.dart';
@@ -18,7 +17,7 @@ class HomeScreenBody extends StatelessWidget {
       child: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Padding(
               padding: EdgeInsets.symmetric(
@@ -26,11 +25,11 @@ class HomeScreenBody extends StatelessWidget {
                 vertical: 2.h,
               ),
               child: Text(
-                DateFormat.yMEd('en').format(DateTime.now()).toString(),
-                style: GoogleFonts.amiri(
-                  color: AppColors.textColor,
-                  fontSize: 20.sp,
-                ),
+                // DateFormat.yMEd('en').format(DateTime.now()).toString(),
+                "الجمعه ، ٨ نوفمبر ٢٠٢٤",
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color: AppColors.textColor,
+                    ),
                 textAlign: TextAlign.start,
               ),
             ),

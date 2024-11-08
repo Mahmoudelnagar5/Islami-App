@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'colors.dart';
+import 'constants.dart';
 
 ThemeData lightTheme() {
   return ThemeData(
@@ -14,7 +15,7 @@ ThemeData lightTheme() {
         color: AppColors.darkPurple,
         fontSize: 24.sp,
         fontWeight: FontWeight.bold,
-        fontFamily: 'Rubik',
+        fontFamily: AppConstants.textFontFamily,
       ),
     ),
     textTheme: TextTheme(
@@ -22,47 +23,59 @@ ThemeData lightTheme() {
         fontSize: 20.sp,
         fontWeight: FontWeight.bold,
         color: AppColors.textColor,
-        fontFamily: 'Rubik',
+        fontFamily: AppConstants.textFontFamily,
       ),
       headlineMedium: TextStyle(
         fontSize: 26.sp,
         fontWeight: FontWeight.bold,
         color: AppColors.textColor,
-        fontFamily: 'Rubik',
+        fontFamily: AppConstants.textFontFamily,
       ),
       headlineLarge: TextStyle(
         fontSize: 32.sp,
         fontWeight: FontWeight.bold,
         color: AppColors.textColor,
-        fontFamily: 'Rubik',
+        fontFamily: AppConstants.textFontFamily,
       ),
       bodySmall: TextStyle(
         fontSize: 16.sp,
         color: AppColors.blackColor,
-        fontFamily: 'Rubik',
+        fontFamily: AppConstants.textFontFamily,
       ),
       bodyMedium: TextStyle(
         fontSize: 20.sp,
         color: AppColors.blackColor,
-        fontFamily: 'Rubik',
+        fontFamily: AppConstants.textFontFamily,
       ),
       bodyLarge: TextStyle(
         fontSize: 24.sp,
         color: AppColors.blackColor,
-        fontFamily: 'Rubik',
+        fontFamily: AppConstants.textFontFamily,
       ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: AppColors.whiteColor,
-      selectedItemColor: AppColors.darkPurple,
       unselectedItemColor: AppColors.darkGrey,
       unselectedIconTheme: IconThemeData(
         color: AppColors.darkGrey,
         size: 30.r,
       ),
+      unselectedLabelStyle: TextStyle(
+        fontSize: 14.sp,
+        fontWeight: FontWeight.bold,
+        color: AppColors.darkGrey,
+        fontFamily: AppConstants.textFontFamily,
+      ),
+      selectedItemColor: AppColors.darkPurple,
       selectedIconTheme: IconThemeData(
         color: AppColors.darkPurple,
         size: 30.r,
+      ),
+      selectedLabelStyle: TextStyle(
+        fontSize: 14.sp,
+        fontWeight: FontWeight.bold,
+        color: AppColors.darkPurple,
+        fontFamily: AppConstants.textFontFamily,
       ),
     ),
   );
