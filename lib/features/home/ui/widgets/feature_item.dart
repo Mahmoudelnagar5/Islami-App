@@ -9,13 +9,19 @@ class FeatureItem extends StatelessWidget {
     super.key,
     required this.image,
     required this.title,
+    this.routeName = "",
   });
   final String image;
   final String title;
+  final String routeName;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: routeName == ""
+          ? () {}
+          : () {
+              Navigator.of(context).pushNamed(routeName);
+            },
       child: Column(
         children: [
           Container(

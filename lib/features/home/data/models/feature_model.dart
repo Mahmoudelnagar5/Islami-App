@@ -1,10 +1,12 @@
 class FeatureModel {
   final String title;
   final String image;
+  final String routeName;
 
   const FeatureModel({
     required this.title,
     required this.image,
+    this.routeName = '',
   });
   static List<FeatureModel> features = [
     const FeatureModel(
@@ -14,6 +16,7 @@ class FeatureModel {
     const FeatureModel(
       title: 'القرآن الكريم',
       image: 'assets/images/quran.png',
+      routeName: 'quran_home',
     ),
     const FeatureModel(
       title: 'تسبيح',

@@ -78,6 +78,23 @@ ThemeData lightTheme() {
         fontFamily: AppConstants.textFontFamily,
       ),
     ),
+    tabBarTheme: TabBarTheme(
+      indicatorSize: TabBarIndicatorSize.label,
+      labelColor: AppColors.darkPurple,
+      unselectedLabelColor: AppColors.darkGrey,
+      labelStyle: TextStyle(
+        fontSize: 18.sp,
+        fontWeight: FontWeight.bold,
+        color: AppColors.darkPurple,
+        fontFamily: AppConstants.textFontFamily,
+      ),
+      unselectedLabelStyle: TextStyle(
+        fontSize: 18.sp,
+        fontWeight: FontWeight.bold,
+        color: AppColors.darkGrey,
+        fontFamily: AppConstants.textFontFamily,
+      ),
+    ),
   );
 }
 

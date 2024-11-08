@@ -3,13 +3,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:intl/intl.dart';
 
 import '../../../../core/theming/colors.dart';
+import '../../../../core/theming/constants.dart';
 import '../../data/models/feature_model.dart';
 import 'feature_item.dart';
 import 'last_read.dart';
 import 'prayer_container.dart';
 
 class HomeScreenBody extends StatelessWidget {
-  const HomeScreenBody({super.key});
+  const HomeScreenBody({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +24,8 @@ class HomeScreenBody extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.symmetric(
-                horizontal: 11.w,
-                vertical: 2.h,
+                horizontal: AppConstants.defaultPadding.w,
+                vertical: AppConstants.defaultPadding.h,
               ),
               child: Text(
                 // DateFormat.yMEd('en').format(DateTime.now()).toString(),
@@ -47,6 +50,7 @@ class HomeScreenBody extends StatelessWidget {
               itemBuilder: (context, index) => FeatureItem(
                 image: FeatureModel.features[index].image,
                 title: FeatureModel.features[index].title,
+                routeName: FeatureModel.features[index].routeName,
               ),
             ),
           ],

@@ -5,7 +5,9 @@ import '../widgets/home_view_body.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName = 'home';
-  const HomeScreen({super.key});
+  const HomeScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
