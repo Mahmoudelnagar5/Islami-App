@@ -15,19 +15,22 @@ class FeatureItem extends StatelessWidget {
       child: Column(
         children: [
           Container(
+            height: 110.h,
             alignment: Alignment.center,
             margin: EdgeInsets.symmetric(horizontal: 5.w),
             decoration: BoxDecoration(
-              color: AppColors.lightPurple,
+              color: const Color(0xff003A44),
               borderRadius: BorderRadius.circular(15),
             ),
             child: CircleAvatar(
-                radius: 30.r,
-                backgroundColor: AppColors.lightPurple,
-                child: SvgPicture.asset(
-                  image,
-                  fit: BoxFit.cover,
-                )),
+              radius: 30.r,
+              backgroundColor: AppColors.lightGrey,
+              child: SvgPicture.asset(
+                image,
+                fit: BoxFit.cover,
+                height: 40.h,
+              ),
+            ),
           ),
           const SizedBox(
             height: 10,
