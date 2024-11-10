@@ -21,10 +21,10 @@ final class QuranLoaded extends QuranState {
 }
 
 final class QuranError extends QuranState {
-  final String message;
+  final String errMessage;
 
-  const QuranError(this.message);
+  const QuranError(this.errMessage);
 
   @override
-  List<Object> get props => [message];
+  List<Object> get props => [errMessage];
 }

@@ -1,6 +1,9 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:islami_app/features/quran/data/repos/quran_repo_impl.dart';
+import 'package:islami_app/features/quran/ui/controller/surah_cubit/quran_cubit.dart';
 
 import 'core/theming/app_themes.dart';
 import 'core/theming/constants.dart';
@@ -26,22 +29,27 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Islam App',
-          themeMode: ThemeMode.system,
-          theme: lightTheme(),
-          darkTheme: darkTheme(),
-          home: child,
-          routes: {
-            SplashScreen.routeName: (context) => const SplashScreen(),
-            IslamAppMainScreen.routeName: (context) =>
-                const IslamAppMainScreen(),
-            HomeScreen.routeName: (context) => const HomeScreen(),
-            AudioScreen.routeName: (context) => const AudioScreen(),
-            SettingsScreen.routeName: (context) => const SettingsScreen(),
-            QuranHomeScreen.routeName: (context) => const QuranHomeScreen(),
-          },
+        return BlocProvider(
+          create: (context) => QuranCubit(
+            QuranRepoImpl(),
+          ),
+          child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Islam App',
+            themeMode: ThemeMode.system,
+            theme: lightTheme(),
+            darkTheme: darkTheme(),
+            home: child,
+            routes: {
+              SplashScreen.routeName: (context) => const SplashScreen(),
+              IslamAppMainScreen.routeName: (context) =>
+                  const IslamAppMainScreen(),
+              HomeScreen.routeName: (context) => const HomeScreen(),
+              AudioScreen.routeName: (context) => const AudioScreen(),
+              SettingsScreen.routeName: (context) => const SettingsScreen(),
+              QuranHomeScreen.routeName: (context) => const QuranHomeScreen(),
+            },
+          ),
         );
       },
       child: const SplashScreen(),
