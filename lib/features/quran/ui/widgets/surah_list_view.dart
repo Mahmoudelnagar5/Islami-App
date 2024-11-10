@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:islami_app/features/quran/ui/controller/surah_cubit/quran_cubit.dart';
 
-import '../../../../../core/theming/colors.dart';
-import '../../../../../core/theming/constants.dart';
-import '../../../../../core/widgets/custom_error_widget.dart';
+import '../../../../core/theming/colors.dart';
+import '../../../../core/theming/constants.dart';
+import '../../../../core/widgets/custom_error_widget.dart';
 import 'surah_item.dart';
 
 class SurahListView extends StatefulWidget {
