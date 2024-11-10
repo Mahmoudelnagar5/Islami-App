@@ -8,7 +8,7 @@ import '../../../../core/widgets/grdient_container.dart';
 import 'juzaa.dart';
 import 'sajda.dart';
 import 'sura.dart';
-import 'widgets/bar_text.dart';
+import '../widgets/bar_text.dart';
 
 class QuranHomeScreen extends StatelessWidget {
   static const String routeName = 'quran_home';

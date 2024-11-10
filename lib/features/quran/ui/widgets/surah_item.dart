@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/features/quran/data/models/quran_model.dart';
 
-import '../../../../../core/theming/colors.dart';
+import '../../../../core/theming/colors.dart';
 
 class SurahItem extends StatelessWidget {
   const SurahItem({super.key, required this.quranModel});
