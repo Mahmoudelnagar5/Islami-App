@@ -10,7 +10,7 @@ class LastReadSurah extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FadeInLeft(
+    return FadeInRight(
       child: Container(
         padding: EdgeInsets.symmetric(
           horizontal: AppConstants.defaultPadding * 2.w,
