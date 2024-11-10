@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/constants.dart';
 
 class JuzaaScreen extends StatelessWidget {
@@ -10,7 +11,6 @@ class JuzaaScreen extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         margin: const EdgeInsets.only(
-          top: AppConstants.defaultMargin * 2,
           bottom: AppConstants.defaultMargin * 4,
         ),
         padding: const EdgeInsets.symmetric(
@@ -33,12 +33,19 @@ class JuzaaScreen extends StatelessWidget {
                 vertical: AppConstants.defaultMargin * .5,
               ),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: AppColors.whiteColor,
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                  color: Colors.grey,
-                  width: 0.5,
+                  color: AppColors.darkGrey,
+                  width: 1,
                 ),
+                boxShadow: const [
+                  BoxShadow(
+                    color: AppColors.lightGrey,
+                    spreadRadius: 2,
+                    blurRadius: 2,
+                  ),
+                ],
               ),
               child: Center(
                 child: Text(
