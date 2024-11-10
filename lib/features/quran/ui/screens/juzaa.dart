@@ -14,7 +14,7 @@ class JuzaaScreen extends StatelessWidget {
           bottom: AppConstants.defaultMargin * 4,
         ),
         padding: const EdgeInsets.symmetric(
-          horizontal: AppConstants.defaultPadding,
+          horizontal: AppConstants.defaultPadding * 3,
         ),
         child: GridView.builder(
           padding: EdgeInsets.zero,
@@ -33,7 +33,7 @@ class JuzaaScreen extends StatelessWidget {
                 vertical: AppConstants.defaultMargin * .5,
               ),
               decoration: BoxDecoration(
-                color: AppColors.whiteColor,
+                color: AppColors.darkPurple.withAlpha(120),
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
                   color: AppColors.darkGrey,
@@ -50,7 +50,7 @@ class JuzaaScreen extends StatelessWidget {
               child: Center(
                 child: Text(
                   '${index + 1}',
-                  style: Theme.of(context).textTheme.bodyLarge,
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
               ),
             ),
