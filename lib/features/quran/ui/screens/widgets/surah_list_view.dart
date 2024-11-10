@@ -23,39 +23,37 @@ class _SurahListViewState extends State<SurahListView> {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: AppConstants.defaultPadding,
-          horizontal: AppConstants.defaultPadding,
-        ),
-        child: BlocBuilder<QuranCubit, QuranState>(
-          builder: (context, state) {
-            if (state is QuranLoaded) {
-              return ListView.separated(
-                itemBuilder: (context, index) => Padding(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: AppConstants.defaultPadding,
-                  ),
-                  child: SurahItem(
-                    quranModel: state.surahs[index],
-                  ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        vertical: AppConstants.defaultPadding,
+        horizontal: AppConstants.defaultPadding * 2,
+      ),
+      child: BlocBuilder<QuranCubit, QuranState>(
+        builder: (context, state) {
+          if (state is QuranLoaded) {
+            return ListView.separated(
+              itemBuilder: (context, index) => Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: AppConstants.defaultPadding,
                 ),
-                separatorBuilder: (context, index) => const Divider(
-                  color: AppColors.lightGrey,
-                  thickness: 2,
+                child: SurahItem(
+                  quranModel: state.surahs[index],
                 ),
-                itemCount: 114,
-              );
-            } else if (state is QuranError) {
-              return CustomErrorWidget(error: state.errMessage);
-            } else {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            }
-          },
-        ),
+              ),
+              separatorBuilder: (context, index) => const Divider(
+                color: AppColors.lightGrey,
+                thickness: 2,
+              ),
+              itemCount: 114,
+            );
+          } else if (state is QuranError) {
+            return CustomErrorWidget(error: state.errMessage);
+          } else {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+        },
       ),
     );
   }

@@ -15,23 +15,17 @@ class SurahItem extends StatelessWidget {
       duration: const Duration(milliseconds: 1000),
       child: Row(
         children: [
-          Stack(
-            children: [
-              Image.asset('assets/images/Star 1.png'),
-              SizedBox(
-                height: 32.h,
-                width: 32.w,
-                child: Center(
-                  child: Text(
-                    quranModel.number.toString(),
-                    style: GoogleFonts.amiri(
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.textColor,
-                    ),
-                  ),
-                ),
-              )
-            ],
+          CircleAvatar(
+            backgroundImage: const AssetImage("assets/images/Star 1.png"),
+            radius: 22.r,
+            child: Text(
+              quranModel.number.toString(),
+              style: GoogleFonts.amiri(
+                fontSize: 18.sp,
+                fontWeight: FontWeight.w600,
+                color: AppColors.textColor,
+              ),
+            ),
           ),
           const SizedBox(width: 15),
           Column(
