@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/core/theming/constants.dart';
 
 import '../../../../core/theming/colors.dart';
@@ -7,6 +8,7 @@ import '../../../../core/widgets/grdient_container.dart';
 import 'juzaa.dart';
 import 'sajda.dart';
 import 'sura.dart';
+import 'widgets/bar_text.dart';
 
 class QuranHomeScreen extends StatelessWidget {
   static const String routeName = 'quran_home';
@@ -18,8 +20,12 @@ class QuranHomeScreen extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(
+          title: Text(
             'القرآن الكريم',
+            style: GoogleFonts.amiri(
+              fontWeight: FontWeight.bold,
+              color: AppColors.textColor,
+            ),
           ),
           centerTitle: true,
           bottom: PreferredSize(
@@ -38,9 +44,15 @@ class QuranHomeScreen extends StatelessWidget {
               ),
               child: const TabBar(
                 tabs: [
-                  Text("جزء"),
-                  Text("سجدة"),
-                  Text("سوره"),
+                  BarText(
+                    text: "سورة",
+                  ),
+                  BarText(
+                    text: "سجدة",
+                  ),
+                  BarText(
+                    text: "جزء",
+                  ),
                 ],
               ),
             ),
@@ -49,9 +61,9 @@ class QuranHomeScreen extends StatelessWidget {
         body: const GrdientContainer(
           child: TabBarView(
             children: [
-              JuzaaScreen(),
-              SajdaScreen(),
               SuraScreen(),
+              SajdaScreen(),
+              JuzaaScreen(),
             ],
           ),
         ),

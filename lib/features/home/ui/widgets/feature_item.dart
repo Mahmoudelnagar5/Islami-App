@@ -47,12 +47,14 @@ class FeatureItem extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Text(title,
-              style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                    color: AppColors.textColor,
-                    fontFamily: AppConstants.textFontFamily,
-                    fontWeight: FontWeight.bold,
-                  )),
+          Text(
+            title,
+            style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                  color: AppColors.textColor,
+                  fontFamily: AppConstants.textFontFamily,
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
         ],
       ),
     );

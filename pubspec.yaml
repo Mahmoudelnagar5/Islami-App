@@ -28,10 +28,14 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  animate_do: ^3.3.4
   cupertino_icons: ^1.0.8
+  dartz: ^0.10.1
   device_preview: ^1.2.0
+  equatable: ^2.0.5
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.6
   flutter_islamic_icons: ^1.0.2
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.0.14
@@ -55,4 +59,4 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
-    - assets/json/quran.json
+    - assets/data/
