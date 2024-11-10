@@ -1,0 +1,686 @@
+[
+  {
+    "id": 1,
+    "name": "الفاتحه",
+    "verseCount": 7,
+    "type": "مكية"
+  },
+  {
+    "id": 2,
+    "name": "البقره",
+    "verseCount": 286,
+    "type": "مدنية"
+  },
+  {
+    "id": 3,
+    "name": "ال عمران",
+    "verseCount": 200,
+    "type": "مدنية"
+  },
+  {
+    "id": 4,
+    "name": "النساء",
+    "verseCount": 176,
+    "type": "مدنية"
+  },
+  {
+    "id": 5,
+    "name": "المائدة",
+    "verseCount": 120,
+    "type": "مدنية"
+  },
+  {
+    "id": 6,
+    "name": "الانعام",
+    "verseCount": 165,
+    "type": "مكية"
+  },
+  {
+    "id": 7,
+    "name": "الاعراف",
+    "verseCount": 206,
+    "type": "مكية"
+  },
+  {
+    "id": 8,
+    "name": "الانفال",
+    "verseCount": 75,
+    "type": "مدنية"
+  },
+  {
+    "id": 9,
+    "name": "التوبة",
+    "verseCount": 129,
+    "type": "مدنية"
+  },
+  {
+    "id": 10,
+    "name": "يونس",
+    "verseCount": 109,
+    "type": "مكية"
+  },
+  {
+    "id": 11,
+    "name": "هود",
+    "verseCount": 123,
+    "type": "مكية"
+  },
+  {
+    "id": 12,
+    "name": "يوسف",
+    "verseCount": 111,
+    "type": "مكية"
+  },
+  {
+    "id": 13,
+    "name": "الرعد",
+    "verseCount": 43,
+    "type": "مدنية"
+  },
+  {
+    "id": 14,
+    "name": "ابراهيم",
+    "verseCount": 52,
+    "type": "مكية"
+  },
+  {
+    "id": 15,
+    "name": "الحجر",
+    "verseCount": 99,
+    "type": "مكية"
+  },
+  {
+    "id": 16,
+    "name": "النحل",
+    "verseCount": 128,
+    "type": "مكية"
+  },
+  {
+    "id": 17,
+    "name": "الاسراء",
+    "verseCount": 111,
+    "type": "مكية"
+  },
+  {
+    "id": 18,
+    "name": "الكهف",
+    "verseCount": 110,
+    "type": "مكية"
+  },
+  {
+    "id": 19,
+    "name": "مريم",
+    "verseCount": 98,
+    "type": "مكية"
+  },
+  {
+    "id": 20,
+    "name": "طه",
+    "verseCount": 135,
+    "type": "مكية"
+  },
+  {
+    "id": 21,
+    "name": "الأنبياء",
+    "verseCount": 112,
+    "type": "مكية"
+  },
+  {
+    "id": 22,
+    "name": "الحج",
+    "verseCount": 78,
+    "type": "مدنية"
+  },
+  {
+    "id": 23,
+    "name": "المؤمنون",
+    "verseCount": 118,
+    "type": "مكية"
+  },
+  {
+    "id": 24,
+    "name": "النور",
+    "verseCount": 64,
+    "type": "مدنية"
+  },
+  {
+    "id": 25,
+    "name": "الفرقان",
+    "verseCount": 77,
+    "type": "مكية"
+  },
+  {
+    "id": 26,
+    "name": "الشعراء",
+    "verseCount": 227,
+    "type": "مكية"
+  },
+  {
+    "id": 27,
+    "name": "النمل",
+    "verseCount": 93,
+    "type": "مكية"
+  },
+  {
+    "id": 28,
+    "name": "القصص",
+    "verseCount": 88,
+    "type": "مكية"
+  },
+  {
+    "id": 29,
+    "name": "العنكبوت",
+    "verseCount": 69,
+    "type": "مكية"
+  },
+  {
+    "id": 30,
+    "name": "الروم",
+    "verseCount": 60,
+    "type": "مكية"
+  },
+  {
+    "id": 31,
+    "name": "لقمان",
+    "verseCount": 34,
+    "type": "مكية"
+  },
+  {
+    "id": 32,
+    "name": "السجدة",
+    "verseCount": 30,
+    "type": "مكية"
+  },
+  {
+    "id": 33,
+    "name": "الأحزاب",
+    "verseCount": 73,
+    "type": "مدنية"
+  },
+  {
+    "id": 34,
+    "name": "سبأ",
+    "verseCount": 54,
+    "type": "مكية"
+  },
+  {
+    "id": 35,
+    "name": "فاطر",
+    "verseCount": 45,
+    "type": "مكية"
+  },
+  {
+    "id": 36,
+    "name": "يس",
+    "verseCount": 83,
+    "type": "مكية"
+  },
+  {
+    "id": 37,
+    "name": "الصافات",
+    "verseCount": 182,
+    "type": "مكية"
+  },
+  {
+    "id": 38,
+    "name": "ص",
+    "verseCount": 88,
+    "type": "مكية"
+  },
+  {
+    "id": 39,
+    "name": "الزمر",
+    "verseCount": 75,
+    "type": "مكية"
+  },
+  {
+    "id": 40,
+    "name": "غافر",
+    "verseCount": 85,
+    "type": "مكية"
+  },
+  {
+    "id": 41,
+    "name": "فصلت",
+    "verseCount": 54,
+    "type": "مكية"
+  },
+  {
+    "id": 42,
+    "name": "الشورى",
+    "verseCount": 53,
+    "type": "مكية"
+  },
+  {
+    "id": 43,
+    "name": "الزخرف",
+    "verseCount": 89,
+    "type": "مكية"
+  },
+  {
+    "id": 44,
+    "name": "الدخان",
+    "verseCount": 59,
+    "type": "مكية"
+  },
+  {
+    "id": 45,
+    "name": "الجاثية",
+    "verseCount": 37,
+    "type": "مكية"
+  },
+  {
+    "id": 46,
+    "name": "الأحقاف",
+    "verseCount": 35,
+    "type": "مكية"
+  },
+  {
+    "id": 47,
+    "name": "محمد",
+    "verseCount": 38,
+    "type": "مدنية"
+  },
+  {
+    "id": 48,
+    "name": "الفتح",
+    "verseCount": 29,
+    "type": "مدنية"
+  },
+  {
+    "id": 49,
+    "name": "الحجرات",
+    "verseCount": 18,
+    "type": "مدنية"
+  },
+  {
+    "id": 50,
+    "name": "ق",
+    "verseCount": 45,
+    "type": "مكية"
+  },
+  {
+    "id": 51,
+    "name": "الذاريات",
+    "verseCount": 60,
+    "type": "مكية"
+  },
+  {
+    "id": 52,
+    "name": "الطور",
+    "verseCount": 49,
+    "type": "مكية"
+  },
+  {
+    "id": 53,
+    "name": "النجم",
+    "verseCount": 62,
+    "type": "مكية"
+  },
+  {
+    "id": 54,
+    "name": "القمر",
+    "verseCount": 55,
+    "type": "مكية"
+  },
+  {
+    "id": 55,
+    "name": "الرحمن",
+    "verseCount": 78,
+    "type": "مدنية"
+  },
+  {
+    "id": 56,
+    "name": "الواقعة",
+    "verseCount": 96,
+    "type": "مكية"
+  },
+  {
+    "id": 57,
+    "name": "الحديد",
+    "verseCount": 29,
+    "type": "مدنية"
+  },
+  {
+    "id": 58,
+    "name": "المجادلة",
+    "verseCount": 22,
+    "type": "مدنية"
+  },
+  {
+    "id": 59,
+    "name": "الحشر",
+    "verseCount": 24,
+    "type": "مدنية"
+  },
+  {
+    "id": 60,
+    "name": "الممتحنة",
+    "verseCount": 13,
+    "type": "مدنية"
+  },
+  {
+    "id": 61,
+    "name": "الصف",
+    "verseCount": 14,
+    "type": "مدنية"
+  },
+  {
+    "id": 62,
+    "name": "الجمعة",
+    "verseCount": 11,
+    "type": "مدنية"
+  },
+  {
+    "id": 63,
+    "name": "المنافقون",
+    "verseCount": 11,
+    "type": "مدنية"
+  },
+  {
+    "id": 64,
+    "name": "التغابن",
+    "verseCount": 18,
+    "type": "مدنية"
+  },
+  {
+    "id": 65,
+    "name": "الطلاق",
+    "verseCount": 12,
+    "type": "مدنية"
+  },
+  {
+    "id": 66,
+    "name": "التحريم",
+    "verseCount": 12,
+    "type": "مدنية"
+  },
+  {
+    "id": 67,
+    "name": "الملك",
+    "verseCount": 30,
+    "type": "مكية"
+  },
+  {
+    "id": 68,
+    "name": "القلم",
+    "verseCount": 52,
+    "type": "مكية"
+  },
+  {
+    "id": 69,
+    "name": "الحاقة",
+    "verseCount": 52,
+    "type": "مكية"
+  },
+  {
+    "id": 70,
+    "name": "المعارج",
+    "verseCount": 44,
+    "type": "مكية"
+  },
+  {
+    "id": 71,
+    "name": "نوح",
+    "verseCount": 28,
+    "type": "مكية"
+  },
+  {
+    "id": 72,
+    "name": "الجن",
+    "verseCount": 28,
+    "type": "مكية"
+  },
+  {
+    "id": 73,
+    "name": "المزمل",
+    "verseCount": 20,
+    "type": "مكية"
+  },
+  {
+    "id": 74,
+    "name": "المدثر",
+    "verseCount": 56,
+    "type": "مكية"
+  },
+  {
+    "id": 75,
+    "name": "القيامة",
+    "verseCount": 40,
+    "type": "مكية"
+  },
+  {
+    "id": 76,
+    "name": "الإنسان",
+    "verseCount": 31,
+    "type": "مدنية"
+  },
+  {
+    "id": 77,
+    "name": "المرسلات",
+    "verseCount": 50,
+    "type": "مكية"
+  },
+  {
+    "id": 78,
+    "name": "النبأ",
+    "verseCount": 40,
+    "type": "مكية"
+  },
+  {
+    "id": 79,
+    "name": "النازعات",
+    "verseCount": 46,
+    "type": "مكية"
+  },
+  {
+    "id": 80,
+    "name": "عبس",
+    "verseCount": 42,
+    "type": "مكية"
+  },
+  {
+    "id": 81,
+    "name": "التكوير",
+    "verseCount": 29,
+    "type": "مكية"
+  },
+  {
+    "id": 82,
+    "name": "الإنفطار",
+    "verseCount": 19,
+    "type": "مكية"
+  },
+  {
+    "id": 83,
+    "name": "المطففين",
+    "verseCount": 36,
+    "type": "مكية"
+  },
+  {
+    "id": 84,
+    "name": "الإنشقاق",
+    "verseCount": 25,
+    "type": "مكية"
+  },
+  {
+    "id": 85,
+    "name": "البروج",
+    "verseCount": 22,
+    "type": "مكية"
+  },
+  {
+    "id": 86,
+    "name": "الطارق",
+    "verseCount": 17,
+    "type": "مكية"
+  },
+  {
+    "id": 87,
+    "name": "الأعلى",
+    "verseCount": 19,
+    "type": "مكية"
+  },
+  {
+    "id": 88,
+    "name": "الغاشية",
+    "verseCount": 26,
+    "type": "مكية"
+  },
+  {
+    "id": 89,
+    "name": "الفجر",
+    "verseCount": 30,
+    "type": "مكية"
+  },
+  {
+    "id": 90,
+    "name": "البلد",
+    "verseCount": 20,
+    "type": "مكية"
+  },
+  {
+    "id": 91,
+    "name": "الشمس",
+    "verseCount": 15,
+    "type": "مكية"
+  },
+  {
+    "id": 92,
+    "name": "الليل",
+    "verseCount": 21,
+    "type": "مكية"
+  },
+  {
+    "id": 93,
+    "name": "الضحى",
+    "verseCount": 11,
+    "type": "مكية"
+  },
+  {
+    "id": 94,
+    "name": "الشرح",
+    "verseCount": 8,
+    "type": "مكية"
+  },
+  {
+    "id": 95,
+    "name": "التين",
+    "verseCount": 8,
+    "type": "مكية"
+  },
+  {
+    "id": 96,
+    "name": "العلق",
+    "verseCount": 19,
+    "type": "مكية"
+  },
+  {
+    "id": 97,
+    "name": "القدر",
+    "verseCount": 5,
+    "type": "مكية"
+  },
+  {
+    "id": 98,
+    "name": "البينة",
+    "verseCount": 8,
+    "type": "مدنية"
+  },
+  {
+    "id": 99,
+    "name": "الزلزلة",
+    "verseCount": 8,
+    "type": "مدنية"
+  },
+  {
+    "id": 100,
+    "name": "العاديات",
+    "verseCount": 11,
+    "type": "مكية"
+  },
+  {
+    "id": 101,
+    "name": "القارعة",
+    "verseCount": 11,
+    "type": "مكية"
+  },
+  {
+    "id": 102,
+    "name": "التكاثر",
+    "verseCount": 8,
+    "type": "مكية"
+  },
+  {
+    "id": 103,
+    "name": "العصر",
+    "verseCount": 3,
+    "type": "مكية"
+  },
+  {
+    "id": 104,
+    "name": "الهمزة",
+    "verseCount": 9,
+    "type": "مكية"
+  },
+  {
+    "id": 105,
+    "name": "الفيل",
+    "verseCount": 5,
+    "type": "مكية"
+  },
+  {
+    "id": 106,
+    "name": "قريش",
+    "verseCount": 4,
+    "type": "مكية"
+  },
+  {
+    "id": 107,
+    "name": "الماعون",
+    "verseCount": 7,
+    "type": "مكية"
+  },
+  {
+    "id": 108,
+    "name": "الكوثر",
+    "verseCount": 3,
+    "type": "مكية"
+  },
+  {
+    "id": 109,
+    "name": "الكافرون",
+    "verseCount": 6,
+    "type": "مكية"
+  },
+  {
+    "id": 110,
+    "name": "النصر",
+    "verseCount": 3,
+    "type": "مدنية"
+  },
+  {
+    "id": 111,
+    "name": "المسد",
+    "verseCount": 5,
+    "type": "مكية"
+  },
+  {
+    "id": 112,
+    "name": "الإخلاص",
+    "verseCount": 4,
+    "type": "مكية"
+  },
+  {
+    "id": 113,
+    "name": "الفلق",
+    "verseCount": 5,
+    "type": "مدنية"
+  },
+  {
+    "id": 114,
+    "name": "الناس",
+    "verseCount": 6,
+    "type": "مدنية"
+  }
+]

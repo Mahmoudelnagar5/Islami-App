@@ -59,6 +59,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+<<<<<<< HEAD
     - assets/data/
     # - assets/images/hadith.png
   #   - images/a_dot_ham.jpeg
@@ -77,3 +78,6 @@ flutter:
         - asset: assets/fonts/Rubik-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+=======
+    - assets/json/quran.json
+>>>>>>> 44c006b3891486296c0ce0a70e4e40f4f5cfcf37

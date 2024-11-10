@@ -40,7 +40,7 @@ class SurahItem extends StatelessWidget {
               Text(
                 quranModel.englishName.toString(),
                 style: GoogleFonts.poppins(
-                  fontSize: 21.sp,
+                  fontSize: 15.sp,
                   color: AppColors.textColor,
                   fontWeight: FontWeight.bold,
                 ),

@@ -29,11 +29,12 @@ class QuranHomeScreen extends StatelessWidget {
           ),
           centerTitle: true,
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(50.h),
+            preferredSize: Size.fromHeight(60.h),
             child: Container(
               height: 45.h,
               margin: const EdgeInsets.symmetric(
                 horizontal: AppConstants.defaultMargin * 2,
+                vertical: AppConstants.defaultMargin * 2,
               ),
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(
