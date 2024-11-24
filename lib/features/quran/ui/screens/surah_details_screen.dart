@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:islami_app/features/quran/data/models/quran_model.dart';
-import '../../../../core/theming/colors.dart';
+import '../widgets/basmalla_container.dart';
 import '../widgets/custom_app_bar.dart';
 import '../widgets/surah_list.dart';
 
@@ -21,6 +21,11 @@ class SuraDetailsScreen extends StatelessWidget {
             SizedBox(height: 10.h),
             SurahsList(
               surahs: surahs,
+            ),
+            SizedBox(height: 12.h),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 12),
+              child: BasmallaContainer(),
             ),
           ],
         ),
