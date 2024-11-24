@@ -10,6 +10,7 @@ import 'core/theming/constants.dart';
 import 'features/audio/ui/audio.dart';
 import 'features/home/ui/screens/home.dart';
 import 'features/quran/ui/screens/quran_home.dart';
+import 'features/quran/ui/screens/surah_details_screen.dart';
 import 'features/settings/ui/settings.dart';
 import 'features/splash/ui/splash.dart';
 import 'islam_app.dart';
@@ -48,6 +49,8 @@ class MyApp extends StatelessWidget {
               AudioScreen.routeName: (context) => const AudioScreen(),
               SettingsScreen.routeName: (context) => const SettingsScreen(),
               QuranHomeScreen.routeName: (context) => const QuranHomeScreen(),
+              SuraDetailsScreen.routeName: (context) =>
+                  const SuraDetailsScreen(),
             },
           ),
         );
