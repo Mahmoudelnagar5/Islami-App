@@ -5,7 +5,6 @@ import 'package:islami_app/features/quran/ui/controller/surah_cubit/quran_cubit.
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/constants.dart';
 import '../../../../core/widgets/custom_error_widget.dart';
-import '../../data/models/quran_model.dart';
 import '../screens/surah_details_screen.dart';
 import 'surah_item.dart';
 

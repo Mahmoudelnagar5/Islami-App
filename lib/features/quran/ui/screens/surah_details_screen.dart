@@ -12,7 +12,7 @@ class SuraDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final args = ModalRoute.of(context)!.settings.arguments as List<dynamic>;
+    var args = ModalRoute.of(context)!.settings.arguments as List<dynamic>;
     final surahs = args[0] as List<QuranModel>;
     return SafeArea(
       child: Scaffold(
@@ -23,16 +23,18 @@ class SuraDetailsScreen extends StatelessWidget {
             SizedBox(height: 10.h),
             SurahsList(surahs: surahs),
             SizedBox(height: 12.h),
-            const Expanded(
+            Expanded(
               child: CustomScrollView(
                 slivers: [
-                  SliverToBoxAdapter(
+                  const SliverToBoxAdapter(
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 12),
                       child: BasmallaContainer(),
                     ),
                   ),
-                  SurahDetailsList(),
+                  SurahDetailsList(
+                    surahIndex: args[1] as int,
+                  ),
                 ],
               ),
             ),

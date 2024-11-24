@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:islami_app/features/quran/data/repos/quran_repo_impl.dart';
 import 'package:islami_app/features/quran/ui/controller/surah_cubit/quran_cubit.dart';
+import 'package:islami_app/features/quran/ui/controller/surah_details_cubit/surah_details_cubit.dart';
 
 import 'core/theming/app_themes.dart';
 import 'core/theming/constants.dart';
@@ -30,10 +31,19 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
-        return BlocProvider(
-          create: (context) => QuranCubit(
-            QuranRepoImpl(),
-          ),
+        return MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (context) => QuranCubit(
+                QuranRepoImpl(),
+              ),
+            ),
+            BlocProvider(
+              create: (context) => SurahDetailsCubit(
+                QuranRepoImpl(),
+              ),
+            ),
+          ],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Islam App',

@@ -6,5 +6,5 @@ import '../models/surah_details_model.dart';
 
 abstract class QuranRepo {
   Future<Either<Failure, List<QuranModel>>> getSurahs();
-  Future<Either<Failure, SurahDetailsModel>> getSurahDetails(int id);
+  Future<Either<Failure, Data>> getSurahDetails(int id);
 }

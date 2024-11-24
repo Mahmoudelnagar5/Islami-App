@@ -1,4 +1,44 @@
-class SurahDetailsModel {
+class Data {
+  int number;
+  String name;
+  String englishName;
+  String englishNameTranslation;
+  String revelationType;
+  int numberOfAyahs;
+  List<Ayah> ayahs;
+
+  Data({
+    required this.number,
+    required this.name,
+    required this.englishName,
+    required this.englishNameTranslation,
+    required this.revelationType,
+    required this.numberOfAyahs,
+    required this.ayahs,
+  });
+
+  factory Data.fromJson(Map<String, dynamic> json) => Data(
+        number: json["number"],
+        name: json["name"],
+        englishName: json["englishName"],
+        englishNameTranslation: json["englishNameTranslation"],
+        revelationType: json["revelationType"],
+        numberOfAyahs: json["numberOfAyahs"],
+        ayahs: List<Ayah>.from(json["ayahs"].map((x) => Ayah.fromJson(x))),
+      );
+
+  Map<String, dynamic> toJson() => {
+        "number": number,
+        "name": name,
+        "englishName": englishName,
+        "englishNameTranslation": englishNameTranslation,
+        "revelationType": revelationType,
+        "numberOfAyahs": numberOfAyahs,
+        "ayahs": List<dynamic>.from(ayahs.map((x) => x.toJson())),
+      };
+}
+
+class Ayah {
   int number;
   String audio;
   List<String> audioSecondary;
@@ -11,7 +51,7 @@ class SurahDetailsModel {
   int hizbQuarter;
   bool sajda;
 
-  SurahDetailsModel({
+  Ayah({
     required this.number,
     required this.audio,
     required this.audioSecondary,
@@ -25,8 +65,7 @@ class SurahDetailsModel {
     required this.sajda,
   });
 
-  factory SurahDetailsModel.fromJson(Map<String, dynamic> json) =>
-      SurahDetailsModel(
+  factory Ayah.fromJson(Map<String, dynamic> json) => Ayah(
         number: json["number"],
         audio: json["audio"],
         audioSecondary: List<String>.from(json["audioSecondary"].map((x) => x)),

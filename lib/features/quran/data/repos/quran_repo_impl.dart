@@ -7,9 +7,9 @@ import 'package:flutter/services.dart';
 import 'package:islami_app/core/utils/error/failures.dart';
 
 import 'package:islami_app/features/quran/data/models/quran_model.dart';
+import 'package:islami_app/features/quran/data/models/surah_details_model.dart';
 
 import '../../../../core/utils/api_services.dart';
-import '../models/surah_details_model.dart';
 import 'quran_repo.dart';
 
 class QuranRepoImpl implements QuranRepo {
@@ -29,10 +29,10 @@ class QuranRepoImpl implements QuranRepo {
   }
 
   @override
-  Future<Either<Failure, SurahDetailsModel>> getSurahDetails(int id) async {
+  Future<Either<Failure, Data>> getSurahDetails(int id) async {
     try {
       var data = await ApiServices().getSurahDetails(id);
-      return Right(SurahDetailsModel.fromJson(data['data']['ayahs']));
+      return Right(Data.fromJson(data['data']));
     } catch (e) {
       if (e is DioException) {
         return Left(ServerFailure.fromDioError(e));

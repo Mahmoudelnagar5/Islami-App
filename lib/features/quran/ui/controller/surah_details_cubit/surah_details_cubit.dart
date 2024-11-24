@@ -1,8 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:islami_app/features/quran/data/models/surah_details_model.dart';
 import 'package:islami_app/features/quran/data/repos/quran_repo.dart';
-
-import '../../../data/models/surah_details_model.dart';
 
 part 'surah_details_state.dart';
 
