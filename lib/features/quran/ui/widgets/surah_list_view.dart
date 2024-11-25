@@ -5,6 +5,7 @@ import 'package:islami_app/features/quran/ui/controller/surah_cubit/quran_cubit.
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/constants.dart';
 import '../../../../core/widgets/custom_error_widget.dart';
+import '../screens/surah_details_screen.dart';
 import 'surah_item.dart';
 
 class SurahListView extends StatefulWidget {
@@ -36,8 +37,15 @@ class _SurahListViewState extends State<SurahListView> {
                 padding: const EdgeInsets.symmetric(
                   vertical: AppConstants.defaultPadding,
                 ),
-                child: SurahItem(
-                  quranModel: state.surahs[index],
+                child: InkWell(
+                  onTap: () => Navigator.pushNamed(
+                    context,
+                    SuraDetailsScreen.routeName,
+                    arguments: [state.surahs, index],
+                  ),
+                  child: SurahItem(
+                    quranModel: state.surahs[index],
+                  ),
                 ),
               ),
               separatorBuilder: (context, index) => const Divider(
