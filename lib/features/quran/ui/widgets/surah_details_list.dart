@@ -35,6 +35,7 @@ class _SurahDetailsListState extends State<SurahDetailsList> {
           return SliverList.separated(
             itemBuilder: (context, index) => SurahDetailsItem(
               data: state.surahDetailsModel.ayahs[index],
+              index: widget.surahIndex + 1,
             ),
             itemCount: state.surahDetailsModel.numberOfAyahs,
             separatorBuilder: (context, index) => const Divider(

@@ -3,12 +3,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/theming/colors.dart';
+import '../../data/models/quran_model.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
     super.key,
+    required this.surahs,
+    required this.selectedSurahIndex,
   });
-
+  final List<QuranModel> surahs;
+  final int selectedSurahIndex;
   @override
   Widget build(BuildContext context) {
     return PreferredSize(
@@ -41,7 +45,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Al-Fatihah',
+                  surahs[selectedSurahIndex].englishName.toString(),
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: AppColors.textColor,
                         fontWeight: FontWeight.bold,
@@ -49,9 +53,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       ),
                 ),
                 Text(
-                  'MECCAN -  7 AYAT',
+                  '${surahs[selectedSurahIndex].revelationType} - ${surahs[selectedSurahIndex].numberOfAyahs} Ayat',
                   style: GoogleFonts.poppins(
-                    color: const Color(0xffA4A3A6),
+                    color: Colors.grey.shade600,
                     fontSize: 15.sp,
                   ),
                 ),

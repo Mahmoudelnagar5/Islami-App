@@ -1,23 +1,69 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../../../../core/theming/colors.dart';
 import '../../data/models/surah_details_model.dart';
 
-class SurahDetailsItem extends StatelessWidget {
-  const SurahDetailsItem({super.key, required this.data});
+class SurahDetailsItem extends StatefulWidget {
+  const SurahDetailsItem({super.key, required this.data, required this.index});
   final Ayah data;
+  final int index;
+
+  @override
+  State<SurahDetailsItem> createState() => _SurahDetailsItemState();
+}
+
+class _SurahDetailsItemState extends State<SurahDetailsItem> {
+  final AudioPlayer _audioPlayer = AudioPlayer();
+  bool isPlaying = false;
+  @override
+  void initState() {
+    super.initState();
+    _audioPlayer.onPlayerStateChanged.listen((event) {
+      if (event == PlayerState.completed) {
+        setState(() {
+          isPlaying = false;
+        });
+      }
+    });
+  }
+
+  void _handleAudioPlayPause() async {
+    if (isPlaying) {
+      await _audioPlayer.pause();
+    } else {
+      await _audioPlayer.play(UrlSource(widget.data.audio));
+    }
+
+    setState(() {
+      isPlaying = !isPlaying;
+    });
+  }
+
+  @override
+  void dispose() {
+    _audioPlayer.stop();
+    _audioPlayer.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    if (data.numberInSurah == 1) {
-      if (data.text.length != 39) {
-        data.text = data.text
-            .substring("بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ".length);
+    String text = "";
+    if (widget.data.numberInSurah == 1) {
+      if (widget.index != 1 && widget.index != 9) {
+        text = widget.data.text.substring(38, widget.data.text.length);
+      } else {
+        text = widget.data.text;
       }
+    } else {
+      text = widget.data.text;
     }
+
     return FadeInLeft(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -30,7 +76,7 @@ class SurahDetailsItem extends StatelessWidget {
                   backgroundImage: const AssetImage("assets/images/Star 1.png"),
                   radius: 22.r,
                   child: Text(
-                    data.numberInSurah.toString(), // Example number
+                    widget.data.numberInSurah.toString(), // Example number
                     style: GoogleFonts.amiri(
                       fontSize: 18.sp,
                       fontWeight: FontWeight.w600,
@@ -40,7 +86,11 @@ class SurahDetailsItem extends StatelessWidget {
                 ),
                 const Spacer(),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Share.share(
+                      '${widget.data.text} ,  (${widget.data.numberInSurah})',
+                    );
+                  },
                   icon: Icon(
                     Icons.share,
                     size: 25.sp,
@@ -48,9 +98,9 @@ class SurahDetailsItem extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: _handleAudioPlayPause,
                   icon: Icon(
-                    Icons.play_arrow,
+                    isPlaying ? Icons.pause_outlined : Icons.play_arrow,
                     size: 30.sp,
                     color: AppColors.textColor,
                   ),
@@ -61,7 +111,7 @@ class SurahDetailsItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 10.0),
               child: Text(
-                data.text,
+                text,
                 style: GoogleFonts.amiri(
                   fontSize: 20.sp,
                   fontWeight: FontWeight.bold,
