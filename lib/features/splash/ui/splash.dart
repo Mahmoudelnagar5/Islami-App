@@ -52,7 +52,11 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             Text(
               'إسلاميات ',
-              style: Theme.of(context).textTheme.headlineLarge,
+              style: TextStyle(
+                color: AppColors.textColor,
+                fontSize: 36.sp,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             const Spacer(
               flex: 1,
@@ -62,7 +66,11 @@ class _SplashScreenState extends State<SplashScreen> {
                   horizontal: AppConstants.defaultPadding * 2),
               child: Text(
                 "صديقك اليومي الذي يوفر لك أوقات الصلاة، الأذكار، تلاوة القرآن، اتجاه القبلة، والمزيد لمساعدتك في تعزيز عملك الديني بسهولة ويسر",
-                style: Theme.of(context).textTheme.bodyMedium,
+                style: TextStyle(
+                  color: AppColors.textColor,
+                  fontSize: 26.sp,
+                  fontWeight: FontWeight.bold,
+                ),
                 textAlign: TextAlign.center,
               ),
             ),
