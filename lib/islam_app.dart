@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:islami_app/features/audio/ui/controller/recitation_cubit/recitation_cubit.dart';
 
 import 'core/theming/colors.dart';
+import 'features/audio/data/repos/recitations_repo_impl.dart';
 import 'features/audio/ui/screens/audio.dart';
 import 'features/home/ui/screens/home.dart';
 
@@ -24,7 +27,12 @@ class _IslamAppMainScreenState extends State<IslamAppMainScreen> {
     super.initState();
     screens = [
       const SettingsScreen(),
-      const AudioScreen(),
+      BlocProvider(
+        create: (context) => RecitationCubit(
+          RecitationsRepoImpl(),
+        ),
+        child: const AudioScreen(),
+      ),
       const HomeScreen(),
     ];
   }

@@ -1,13 +1,19 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/core/theming/colors.dart';
 import 'package:islami_app/features/quran/data/models/quran_model.dart';
 
 import '../../../../core/widgets/custom_appbar.dart';
+import '../../../../core/widgets/custom_error_widget.dart';
 import '../../../../core/widgets/grdient_container.dart';
 import '../../data/models/recitation.dart';
+import '../controller/recitation_cubit/recitation_cubit.dart';
+import '../controller/recitation_cubit/recitation_state.dart';
+import '../widgets/recitation_list_view.dart';
 
 class AudioScreen extends StatefulWidget {
   static const String routeName = 'audio';
@@ -18,6 +24,12 @@ class AudioScreen extends StatefulWidget {
 }
 
 class _AudioScreenState extends State<AudioScreen> {
+  @override
+  void initState() {
+    BlocProvider.of<RecitationCubit>(context).getRecitations();
+    super.initState();
+  }
+
   final AudioPlayer audioPlayer = AudioPlayer();
 
   Duration duration = Duration.zero;
@@ -45,53 +57,9 @@ class _AudioScreenState extends State<AudioScreen> {
       ),
       body: GrdientContainer(
         child: Column(
-          children: [],
-        ),
-      ),
-    );
-  }
-}
-
-class RecitationsItem extends StatelessWidget {
-  const RecitationsItem({super.key, required this.recitation});
-  final Recitation recitation;
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(
-            Radius.circular(16),
-          ),
-          color: Color.fromARGB(255, 74, 16, 141),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 8),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                Recitation.styleTranslations[recitation.style ?? 'مرتل'] ??
-                    recitation.style ??
-                    'مرتل',
-                style: GoogleFonts.amiri(
-                  fontSize: 22.sp,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                recitation.translatedName ?? recitation.reciterName ?? '',
-                style: GoogleFonts.amiri(
-                  fontSize: 25.sp,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
+          children: [
+            RecitationsListView(),
+          ],
         ),
       ),
     );
