@@ -8,17 +8,19 @@ part 'quran_state.dart';
 
 class QuranCubit extends Cubit<QuranState> {
   final QuranRepo quranRepo;
+  final List<QuranModel> surahList = [];
   QuranCubit(this.quranRepo) : super(QuranInitial());
   Future<void> getSurahs() async {
     emit(QuranLoading());
     final result = await quranRepo.getSurahs();
     result.fold(
-      (failure) => emit(
-        QuranError(failure.errMessage),
-      ),
-      (surah) => emit(
-        QuranLoaded(surah),
-      ),
+      (failure) => emit(QuranError(failure.errMessage)),
+      (surah) {
+        surahList.addAll(surah);
+        emit(
+          QuranLoaded(surah),
+        );
+      },
     );
   }
 }
