@@ -8,7 +8,7 @@ import 'package:islami_app/features/quran/ui/controller/surah_details_cubit/sura
 
 import 'core/theming/app_themes.dart';
 import 'core/theming/constants.dart';
-import 'features/audio/ui/audio.dart';
+import 'features/audio/ui/screens/audio.dart';
 import 'features/home/ui/screens/home.dart';
 import 'features/quran/ui/screens/quran_home.dart';
 import 'features/quran/ui/screens/surah_details_screen.dart';

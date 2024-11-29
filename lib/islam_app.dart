@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'core/theming/colors.dart';
-import 'features/audio/ui/audio.dart';
+import 'features/audio/ui/screens/audio.dart';
 import 'features/home/ui/screens/home.dart';
 
 import 'features/settings/ui/settings.dart';
