@@ -113,9 +113,9 @@ class _SurahDetailsItemState extends State<SurahDetailsItem> {
               child: Text(
                 text,
                 style: GoogleFonts.amiri(
-                  fontSize: 20.sp,
-                  fontWeight: FontWeight.bold,
-                ),
+                    fontSize: 20.sp,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.textColor),
                 textAlign: TextAlign.right,
               ),
             ),
