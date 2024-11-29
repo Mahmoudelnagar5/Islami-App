@@ -24,11 +24,11 @@ class RecitationsListView extends StatelessWidget {
               itemBuilder: (context, index) {
                 return FadeInLeft(
                   child: RecitationsItem(
-                    recitation: state.recitations[index],
+                    recitation: state.recitations[index + 1],
                   ),
                 );
               },
-              itemCount: state.recitations.length,
+              itemCount: state.recitations.length - 1,
             ),
           );
         } else if (state is RecitationFailure) {

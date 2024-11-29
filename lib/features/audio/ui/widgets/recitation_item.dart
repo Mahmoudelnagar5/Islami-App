@@ -1,16 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../quran/ui/controller/surah_cubit/quran_cubit.dart';
 import '../../data/models/recitation.dart';
+import '../screens/surah_audio_view.dart';
 
-class RecitationsItem extends StatelessWidget {
+class RecitationsItem extends StatefulWidget {
   const RecitationsItem({super.key, required this.recitation});
   final Recitation recitation;
+
+  @override
+  State<RecitationsItem> createState() => _RecitationsItemState();
+}
+
+class _RecitationsItemState extends State<RecitationsItem> {
+  @override
+  void initState() {
+    BlocProvider.of<QuranCubit>(context).getSurahs();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.pushNamed(context, SurahAudioView.routeName,
+            arguments: widget.recitation);
+      },
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
         decoration: const BoxDecoration(
@@ -25,8 +43,9 @@ class RecitationsItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                Recitation.styleTranslations[recitation.style ?? 'مرتل'] ??
-                    recitation.style ??
+                Recitation
+                        .styleTranslations[widget.recitation.style ?? 'مرتل'] ??
+                    widget.recitation.style ??
                     'مرتل',
                 style: GoogleFonts.amiri(
                   fontSize: 22.sp,
@@ -35,7 +54,9 @@ class RecitationsItem extends StatelessWidget {
                 ),
               ),
               Text(
-                recitation.translatedName ?? recitation.reciterName ?? '',
+                widget.recitation.translatedName ??
+                    widget.recitation.reciterName ??
+                    '',
                 style: GoogleFonts.amiri(
                   fontSize: 25.sp,
                   color: Colors.white,
