@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
+import 'package:flutter/services.dart';
 
 class ApiServices {
   static const String baseUrl = 'https://api.alquran.cloud/v1/';
@@ -21,4 +24,24 @@ class ApiServices {
     // print(respone.data);
     return respone.data;
   }
+
+  Future<Map<String, dynamic>> getJuzaaData(int juzaaId) async {
+    var response = await Dio().get('${baseUrl}juz/$juzaaId/quran-uthmani');
+    return response.data;
+  }
+
+  Future<Map<String, dynamic>> getSurahAyas(
+      int juzaaNumber, int surahNumber, int surahId) async {
+    String data = await rootBundle.loadString("assets/data/juzaa.json");
+    List<dynamic> list = await json.decode(data);
+    List<dynamic> ayaArray = list[juzaaNumber - 1]["suras"][surahId]["aya"];
+    int startAya = ayaArray[0] - 1;
+    int endAya = ayaArray[1];
+    int limit = endAya - startAya;
+    String url =
+        '${baseUrl}surah/$surahNumber/ar.alafasy?offset=$startAya&limit=$limit';
+    var response = await Dio().get(url);
+    return response.data;
+  }
+  // response.data["data"]["ayahs"]
 }

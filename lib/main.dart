@@ -13,6 +13,9 @@ import 'core/theming/constants.dart';
 import 'features/audio/data/repos/recitations_repo_impl.dart';
 import 'features/audio/ui/screens/audio.dart';
 import 'features/home/ui/screens/home.dart';
+import 'features/quran/ui/controller/juzaa_cubit/juzaa_cubit.dart';
+import 'features/quran/ui/controller/juzaa_cubit/juzaa_surahs_cubit.dart';
+import 'features/quran/ui/controller/juzaa_cubit/surah_ayas_cubit.dart';
 import 'features/quran/ui/screens/quran_home.dart';
 import 'features/quran/ui/screens/surah_details_screen.dart';
 import 'features/settings/ui/settings.dart';
@@ -48,6 +51,21 @@ class MyApp extends StatelessWidget {
             ),
             BlocProvider(
               create: (context) => SurahDetailsCubit(
+                QuranRepoImpl(),
+              ),
+            ),
+            BlocProvider(
+              create: (context) => JuzaaCubit(
+                QuranRepoImpl(),
+              ),
+            ),
+            BlocProvider(
+              create: (context) => JuzaaSurahsCubit(
+                QuranRepoImpl(),
+              ),
+            ),
+            BlocProvider(
+              create: (context) => SurahAyasCubit(
                 QuranRepoImpl(),
               ),
             ),
