@@ -73,6 +73,7 @@ class _SurahDetailsItemState extends State<SurahDetailsItem> {
             Row(
               children: [
                 CircleAvatar(
+                  backgroundColor: Colors.transparent,
                   backgroundImage: const AssetImage("assets/images/Star 1.png"),
                   radius: 22.r,
                   child: Text(
