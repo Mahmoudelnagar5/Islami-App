@@ -52,10 +52,12 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
             Expanded(
               child: CustomScrollView(
                 slivers: [
-                  const SliverToBoxAdapter(
+                  SliverToBoxAdapter(
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 12),
-                      child: BasmallaContainer(),
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      child: selectedSurahIndex != 8
+                          ? const BasmallaContainer()
+                          : const SizedBox.shrink(),
                     ),
                   ),
                   SurahDetailsList(
