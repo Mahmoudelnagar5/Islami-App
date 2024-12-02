@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/constants.dart';
@@ -26,7 +27,15 @@ class _JuzaaScreenState extends State<JuzaaScreen> {
     return BlocBuilder<JuzaaCubit, JuzaaState>(
       builder: (context, state) {
         if (state is JuzaaLoading) {
-          return const Center(child: CircularProgressIndicator());
+          return Center(
+            child: Center(
+              heightFactor: 10,
+              child: LoadingAnimationWidget.inkDrop(
+                color: AppColors.textColor,
+                size: 50,
+              ),
+            ),
+          );
         } else if (state is JuzaaLoaded) {
           final List<Juzaa> juzaas = state.juzaa;
           return SingleChildScrollView(

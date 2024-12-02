@@ -2,6 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:islami_app/features/audio/ui/controller/surah_audio_cubit/surah_audio_cubit.dart';
 import 'package:islami_app/features/audio/ui/screens/surah_audio_view.dart';
 import 'package:islami_app/features/quran/data/repos/quran_repo_impl.dart';
@@ -25,6 +26,7 @@ import 'features/splash/ui/splash.dart';
 import 'islam_app.dart';
 
 void main() {
+  initializeDateFormatting();
   runApp(DevicePreview(enabled: false, builder: (context) => const MyApp()));
 }
 
