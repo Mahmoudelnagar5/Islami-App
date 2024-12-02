@@ -93,4 +93,50 @@ class QuranRepoImpl implements QuranRepo {
       }
     }
   }
+
+  @override
+  Future<Either<Failure, List<QuranModel>>> getSajdaSurahs() async {
+    try {
+      var data = await ApiServices().getSajdas();
+      var ayahs = (data['data']['ayahs'] as List<dynamic>);
+
+      var surahMap = <int, QuranModel>{};
+      for (var ayaJson in ayahs) {
+        var surahJson = ayaJson['surah'];
+        var surah = QuranModel.fromJson(surahJson);
+        surahMap[surah.number!] = surah;
+      }
+
+      var surahList = surahMap.values.toList();
+      return Right(surahList);
+    } catch (e) {
+      if (e is DioException) {
+        return Left(ServerFailure.fromDioError(e));
+      } else {
+        return Left(ServerFailure(e.toString()));
+      }
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<Ayah>>> getSajdaAyasBySurah(
+      int surahNumber) async {
+    try {
+      var data = await ApiServices().getSajdas();
+      var ayahs = (data['data']['ayahs'] as List<dynamic>);
+
+      var filteredAyahs = ayahs
+          .where((ayaJson) => ayaJson['surah']['number'] == surahNumber)
+          .map((ayaJson) => Ayah.fromJson(ayaJson))
+          .toList();
+
+      return Right(filteredAyahs);
+    } catch (e) {
+      if (e is DioException) {
+        return Left(ServerFailure.fromDioError(e));
+      } else {
+        return Left(ServerFailure(e.toString()));
+      }
+    }
+  }
 }

@@ -16,6 +16,8 @@ import 'features/home/ui/screens/home.dart';
 import 'features/quran/ui/controller/juzaa_cubit/juzaa_cubit.dart';
 import 'features/quran/ui/controller/juzaa_cubit/juzaa_surahs_cubit.dart';
 import 'features/quran/ui/controller/juzaa_cubit/surah_ayas_cubit.dart';
+import 'features/quran/ui/controller/sajda_cubit/sajda_ayas_cubit.dart';
+import 'features/quran/ui/controller/sajda_cubit/sajda_surahs_cubit.dart';
 import 'features/quran/ui/screens/quran_home.dart';
 import 'features/quran/ui/screens/surah_details_screen.dart';
 import 'features/settings/ui/settings.dart';
@@ -66,6 +68,16 @@ class MyApp extends StatelessWidget {
             ),
             BlocProvider(
               create: (context) => SurahAyasCubit(
+                QuranRepoImpl(),
+              ),
+            ),
+            BlocProvider(
+              create: (context) => SajdaSurahsCubit(
+                QuranRepoImpl(),
+              ),
+            ),
+            BlocProvider(
+              create: (context) => SajdaAyasCubit(
                 QuranRepoImpl(),
               ),
             ),
