@@ -43,5 +43,14 @@ class ApiServices {
     var response = await Dio().get(url);
     return response.data;
   }
-  // response.data["data"]["ayahs"]
+
+  Future<Map<String, dynamic>> getSajdas() async {
+    var response = await Dio().get('${baseUrl}sajda/ar.alafasy');
+    return response.data;
+  }
+
+  Future<Map<String, dynamic>> getSajdaAya(ayaId) async {
+    var response = await Dio().get('${baseUrl}ayah/$ayaId/ar.alafasy');
+    return response.data;
+  }
 }

@@ -12,4 +12,6 @@ abstract class QuranRepo {
   Future<Either<Failure, List<QuranModel>>> getJuzaaSurahs(int juzaaId);
   Future<Either<Failure, List<Ayah>>> getSurahAyas(
       int juzaaNumber, int surahNumber, int surahId);
+  Future<Either<Failure, List<QuranModel>>> getSajdaSurahs();
+  Future<Either<Failure, List<Ayah>>> getSajdaAyasBySurah(int surahId);
 }

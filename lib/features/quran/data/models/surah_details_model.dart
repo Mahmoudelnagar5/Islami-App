@@ -76,7 +76,7 @@ class Ayah {
         page: json["page"],
         ruku: json["ruku"],
         hizbQuarter: json["hizbQuarter"],
-        sajda: json["sajda"],
+        sajda: (json["sajda"] is bool) ? json["sajda"] : true,
       );
 
   Map<String, dynamic> toJson() => {
