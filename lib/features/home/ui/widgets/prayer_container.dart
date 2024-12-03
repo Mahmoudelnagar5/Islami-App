@@ -43,18 +43,18 @@ class PrayerContainer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  'صلاه الفجر',
+                  'صلاه العصر',
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: AppColors.whiteColor,
                         fontWeight: FontWeight.bold,
                         fontSize: 22.sp,
                       ),
                 ),
-                const SizedBox(
-                  height: 12,
+                SizedBox(
+                  height: 8.h,
                 ),
                 Text(
-                  '٤:٢٠ صباحاً',
+                  '٢:٤٢ مساءً',
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: AppColors.whiteColor,
                       ),

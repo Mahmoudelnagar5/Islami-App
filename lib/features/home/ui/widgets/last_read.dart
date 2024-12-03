@@ -66,8 +66,8 @@ class _LastReadSurahState extends State<LastReadSurah> {
                             fontSize: 22.sp,
                           ),
                     ),
-                    const SizedBox(
-                      height: 12,
+                    SizedBox(
+                      height: 8.h,
                     ),
                     Text(
                       text,

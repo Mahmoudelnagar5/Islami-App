@@ -35,7 +35,7 @@ class RecitationsListView extends StatelessWidget {
           return CustomErrorWidget(error: state.errMessage);
         } else {
           return Center(
-            heightFactor: 10,
+            heightFactor: 5.h,
             child: LoadingAnimationWidget.inkDrop(
               color: AppColors.textColor,
               size: 50.sp,
