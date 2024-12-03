@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/constants.dart';
@@ -28,7 +29,13 @@ class _SajdaScreenState extends State<SajdaScreen> {
     return BlocBuilder<SajdaSurahsCubit, SajdaSurahsState>(
       builder: (context, state) {
         if (state is SajdaSurahsLoading) {
-          return const Center(child: CircularProgressIndicator());
+          return Center(
+            heightFactor: 10,
+            child: LoadingAnimationWidget.inkDrop(
+              color: AppColors.textColor,
+              size: 50,
+            ),
+          );
         } else if (state is SajdaSurahsLoaded) {
           final List<QuranModel> surahs = state.surahs;
           return GrdientContainer(

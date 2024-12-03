@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/constants.dart';
@@ -38,7 +39,15 @@ class _SajdaAyasState extends State<SajdaAyas> {
       body: BlocBuilder<SajdaAyasCubit, SajdaAyasState>(
         builder: (context, state) {
           if (state is SajdaAyasLoading) {
-            return const Center(child: CircularProgressIndicator());
+            return Center(
+              heightFactor: 10,
+              child: Center(
+                child: LoadingAnimationWidget.inkDrop(
+                  color: AppColors.textColor,
+                  size: 50,
+                ),
+              ),
+            );
           } else if (state is SajdaAyasLoaded) {
             final List<Ayah> ayas = state.ayas;
             return GrdientContainer(

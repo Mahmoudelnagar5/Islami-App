@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:islami_app/features/quran/data/models/quran_model.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/constants.dart';
@@ -41,7 +42,15 @@ class _JuzaaSurahsScreenState extends State<JuzaaSurahsScreen> {
       body: BlocBuilder<JuzaaSurahsCubit, JuzaaSurahsState>(
         builder: (context, state) {
           if (state is JuzaaSurahsLoading) {
-            return const Center(child: CircularProgressIndicator());
+            return Center(
+              child: Center(
+                heightFactor: 10,
+                child: LoadingAnimationWidget.inkDrop(
+                  color: AppColors.textColor,
+                  size: 50,
+                ),
+              ),
+            );
           } else if (state is JuzaaSurahsLoaded) {
             final List<QuranModel> surahs = state.surahs;
             return GrdientContainer(

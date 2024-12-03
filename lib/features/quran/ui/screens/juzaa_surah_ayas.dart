@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/constants.dart';
@@ -44,7 +45,15 @@ class _JuzaaSurahAyasScreenState extends State<JuzaaSurahAyasScreen> {
       body: BlocBuilder<SurahAyasCubit, SurahAyasState>(
         builder: (context, state) {
           if (state is SurahAyasLoading) {
-            return const Center(child: CircularProgressIndicator());
+            return Center(
+              child: Center(
+                heightFactor: 10,
+                child: LoadingAnimationWidget.inkDrop(
+                  color: AppColors.textColor,
+                  size: 50,
+                ),
+              ),
+            );
           } else if (state is SurahAyasLoaded) {
             final List<Ayah> ayas = state.ayas;
             return GrdientContainer(

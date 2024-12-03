@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-// import 'package:intl/intl.dart';
-
+import 'package:intl/intl.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/constants.dart';
 import '../../data/models/feature_model.dart';
@@ -28,10 +27,12 @@ class HomeScreenBody extends StatelessWidget {
                 vertical: AppConstants.defaultPadding.h,
               ),
               child: Text(
-                // DateFormat.yMEd('en').format(DateTime.now()).toString(),
-                "الجمعه ، ٨ نوفمبر ٢٠٢٤",
+                DateFormat.yMMMMd('ar').format(DateTime.now()).toString(),
+                // "الجمعه ، ٨ نوفمبر ٢٠٢٤",
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                       color: AppColors.textColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24.sp,
                     ),
                 textAlign: TextAlign.start,
               ),
